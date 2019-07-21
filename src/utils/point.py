@@ -15,6 +15,9 @@ class Point:
         result.y -= other.y
         return result
 
+    def __mul__(self, value):
+        return Point(self.x * value, self.y * value)
+
     def swap_with(self, other):
         self.x, other.x = other.x, self.x
         self.y, other.y = other.y, self.y
