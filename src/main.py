@@ -1,5 +1,5 @@
-from rasterizer import Rasterizer
-from utils.point import Point
+from src.rasterizer import Rasterizer
+from src.utils.point import Point
 
 
 def do():

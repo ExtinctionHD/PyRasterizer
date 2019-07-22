@@ -51,8 +51,8 @@ class Rasterizer:
         for y in range(min.y, mid.y):
             y_offset = y - min.y
 
-            ax = min.x + (max.x - min.x) * y_offset / total_height
-            bx = min.x + (mid.x - min.x) * y_offset / segment_height
+            ax = min.x + (max.x - min.x) * y_offset // total_height
+            bx = min.x + (mid.x - min.x) * y_offset // segment_height
 
             x_range = range(ax, bx) if ax < bx else range(bx, ax)
             for x in x_range:
@@ -64,8 +64,8 @@ class Rasterizer:
             ay_offset = y - min.y
             by_offset = y - mid.y
 
-            ax = min.x + (max.x - min.x) * ay_offset / total_height
-            bx = mid.x + (max.x - mid.x) * by_offset / segment_height
+            ax = min.x + (max.x - min.x) * ay_offset // total_height
+            bx = mid.x + (max.x - mid.x) * by_offset // segment_height
 
             x_range = range(ax, bx) if ax < bx else range(bx, ax)
             for x in x_range:
