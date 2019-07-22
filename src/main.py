@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 from src.rasterizer import Rasterizer
 from src.utils.point import Point
 
